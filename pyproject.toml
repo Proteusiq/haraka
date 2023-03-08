@@ -1,0 +1,28 @@
+[build-system]
+requires = ["maturin>=0.14,<0.15"]
+
+build-backend = "maturin"
+
+[project]
+name = "haraka"
+version = "0.0.1"
+requires-python = ">=3.7"
+description = "Increasing Python computation with Rust."
+authors = [{ name = "Prayson W. Daniel", email = "praysonpi@gmail.com" }]
+maintainers = [{ name = "Prayson W. Daniel", email = "praysonpi@gmail.com" }]
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Rust",
+    "Programming Language :: Python :: Implementation :: CPython",
+    "Programming Language :: Python :: Implementation :: PyPy",
+]
+
+urls = { repository = "https://github.com/proteusiq/haraka" }
+
+
+[tool.maturin]
+features = ["pyo3/extension-module"]
+
+dynamic = ["dependencies"]
+[tool.setuptools.dynamic]
+dependencies = {file = ["requirements.txt"]}
