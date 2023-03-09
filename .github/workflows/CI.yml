@@ -2,8 +2,7 @@
 on:
   push:
     branches:
-      - main
-      - master
+      - deploy
   pull_request:
   workflow_dispatch:
 
